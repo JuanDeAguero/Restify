@@ -1,0 +1,8 @@
+.DS_Store
+db.sqlite3
+env
+restify/__pycache__
+restifyapp/__pycache__
+restifyapp/views/__pycache__
+restifyapp/migrations
+restifyapp/media
