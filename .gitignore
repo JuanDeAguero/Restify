@@ -1,0 +1,5 @@
+.DS_Store
+server/db.sqlite3
+server/restify/__pycache__
+server/restifyapp/__pycache__
+server/restifyapp/migrations/
