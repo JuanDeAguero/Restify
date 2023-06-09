@@ -1,0 +1,16 @@
+.Nav {
+    align-items: center;
+    background-color: white;
+    display: flex;
+    height: 60px;
+}
+.Nav-logo-img {
+    background-color: transparent;
+    height: 50px;
+}
+.Nav-logo-txt {
+    background-color: transparent;
+    color: #FF385C;
+    font-size: 25px;
+    font-weight: 700;
+}
