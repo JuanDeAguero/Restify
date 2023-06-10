@@ -9,6 +9,8 @@
 /build
 /coverage
 /node_modules
+fullchain.pem
 npm-debug.log*
+privkey.pem
 yarn-debug.log*
 yarn-error.log*
