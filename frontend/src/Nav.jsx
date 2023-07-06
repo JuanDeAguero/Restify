@@ -13,6 +13,11 @@ const Nav = () => {
             </div>
         </div>
         <div className="Nav-right">
+            <button className="Nav-language-btn">
+                <span className="Nav-language-icon material-symbols-outlined">
+                    language
+                </span>
+            </button>
             <button className="Nav-notifications-btn">
                 <span className="Nav-notifications-icon material-symbols-outlined">
                     notifications

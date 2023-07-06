@@ -28,32 +28,49 @@
         align-items: center;
         display: flex;
         justify-content: flex-end;
+        margin-right: 30px;
     }
-        .Nav-notifications-btn {
+        .Nav-language-btn {
+            align-items: center;
             background-color: rgb(240, 240, 240);
-            width: 40px;
-            height: 40px;
             border-radius: 20px;
             display: flex;
-            align-items: center;
+            height: 40px;
             justify-content: center;
+            margin-right: 5px;
+            width: 40px;
+        }
+        .Nav-language-icon {
+            color: rgb(130, 130, 130);
+            overflow: hidden;
+            transform: scale(0.9);
+        }
+        .Nav-notifications-btn {
+            align-items: center;
+            background-color: rgb(240, 240, 240);
+            border-radius: 20px;
+            display: flex;
+            height: 40px;
+            justify-content: center;
+            width: 40px;
         }
             .Nav-notifications-icon {
                 color: rgb(130, 130, 130);
+                overflow: hidden;
             }
         .Nav-user-btn {
+            align-items: center;
             background-color: rgb(240, 240, 240);
-            width: 40px;
-            height: 40px;
             border-radius: 20px;
             display: flex;
-            align-items: center;
+            height: 40px;
             justify-content: center;
-            margin-right: 30px;
             margin-left: 5px;
+            width: 40px;
         }
             .Nav-user-icon {
                 color: rgb(130, 130, 130);
+                overflow: hidden;
             }
 @media only screen and (min-width: 0) and (max-width: 1000px) {
     .Nav-logo-txt {
@@ -62,14 +79,18 @@
 }
 @media only screen and (min-width: 0) and (max-width: 700px) {
     .Nav {
-        height: 60px;
         box-shadow: 0 0 15px rgb(235, 235, 235);
+        height: 60px;
     }
         .Nav-logo-img {
             height: 40px;
+            margin-left: 15px;
         }
         .Nav-logo-txt {
-            visibility: visible;
             font-size: 22px;
+            visibility: visible;
+        }
+        .Nav-right {
+            margin-right: 15px;
         }
 }
