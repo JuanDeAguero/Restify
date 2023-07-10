@@ -17,6 +17,7 @@
             background-color: lightblue;
             position: absolute;
             width: 100%;
+            object-fit: cover;
         }
         .PropertyItem-details {
             aspect-ratio: 1/0.4;
@@ -33,23 +34,23 @@
             position: absolute;
             width: 100%;
         }
-@media only screen and (min-width: 0) and (max-width: 700px) {
+@media only screen and (min-width: 0) and (max-width: 550px) {
     .PropertyItem-wrapper {
         width: 100%;
     }
 }
-@media only screen and (min-width: 700px) and (max-width: 900px) {
+@media only screen and (min-width: 550px) and (max-width: 800px) {
     .PropertyItem-wrapper {
-
+        width: 50%;
     }
 }
-@media only screen and (min-width: 900px) and (max-width: 1300px) {
+@media only screen and (min-width: 800px) and (max-width: 1100px) {
     .PropertyItem-wrapper {
-
+        width: 33.33%;
     }
 }
-@media only screen and (min-width: 1300px) {
+@media only screen and (min-width: 1100px) {
     .PropertyItem-wrapper {
-
+        width: 25%;
     }
 }

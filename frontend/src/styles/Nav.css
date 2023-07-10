@@ -81,7 +81,7 @@
 @media only screen and (min-width: 0) and (max-width: 700px) {
     .Nav {
         box-shadow: 0 0 15px rgb(235, 235, 235);
-        height: 60px;
+        height: 65px;
     }
         .Nav-logo-img {
             height: 40px;
