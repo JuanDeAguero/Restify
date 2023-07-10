@@ -11,6 +11,7 @@
         margin: 10px;
         overflow: hidden;
         position: relative;
+        box-shadow: 0 0 5px rgb(240, 240, 240);
     }
         .PropertyItem-image {
             aspect-ratio: 1/1;
@@ -28,6 +29,23 @@
             position: absolute;
             width: 100%;
         }
+            .PropertyItem-name {
+                font-size: 16px;
+                margin-bottom: 10px;
+                margin-left: 15px;
+                margin-right: 15px;
+            }
+            .PropertyItem-location {
+                color: rgb(80, 80, 80);
+                margin-bottom: 5px;
+                margin-left: 15px;
+                margin-right: 15px;
+            }
+            .PropertyItem-price {
+                color: rgb(80, 80, 80);
+                margin-left: 15px;
+                margin-right: 15px;
+            }
         .PropertyItem-button {
             background-color: transparent;
             height: 100%;
