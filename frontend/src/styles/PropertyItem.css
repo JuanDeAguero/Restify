@@ -1,57 +1,36 @@
 .PropertyItem-wrapper {
+    overflow: visible;
     width: 33.33%;
+    position: relative;
 }
 .PropertyItem-wrapper * {
     background-color: transparent;
 }
     .PropertyItem {
-        aspect-ratio: 1/1.4;
-        background-color: white;
-        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
         margin: 10px;
-        overflow: hidden;
-        position: relative;
-        box-shadow: 0 0 5px rgb(240, 240, 240);
     }
         .PropertyItem-image {
-            aspect-ratio: 1/1;
-            background-color: lightblue;
-            position: absolute;
+            border-radius: 10px;
             width: 100%;
+            aspect-ratio: 1/1;
             object-fit: cover;
         }
         .PropertyItem-details {
-            aspect-ratio: 1/0.4;
-            bottom: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            position: absolute;
-            width: 100%;
+            margin-top: 15px;
         }
-            .PropertyItem-name {
+            .PropertyItem-title {
+                margin-bottom: 5px;
                 font-size: 16px;
-                margin-bottom: 10px;
-                margin-left: 15px;
-                margin-right: 15px;
             }
             .PropertyItem-location {
-                color: rgb(80, 80, 80);
                 margin-bottom: 5px;
-                margin-left: 15px;
-                margin-right: 15px;
+                font-weight: 500;
             }
             .PropertyItem-price {
-                color: rgb(80, 80, 80);
-                margin-left: 15px;
-                margin-right: 15px;
+                color: rgb(90, 90, 90);
             }
-        .PropertyItem-button {
-            background-color: transparent;
-            height: 100%;
-            position: absolute;
-            width: 100%;
-        }
 @media only screen and (min-width: 0) and (max-width: 550px) {
     .PropertyItem-wrapper {
         width: 100%;

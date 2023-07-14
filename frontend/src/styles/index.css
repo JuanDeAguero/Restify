@@ -11,6 +11,10 @@
     padding: 0;
     text-decoration: none;
 }
+button {
+    background-color: transparent;
+    display: block;
+}
 button:hover {
     cursor: pointer;
 }

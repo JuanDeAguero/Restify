@@ -1,13 +1,16 @@
 import "./styles/PropertyItem.css";
 
-const PropertyItem = ({name, location, price, img}) => {
+const PropertyItem = ({title, location, price, img}) => {
     return (
     <div className="PropertyItem-wrapper">
         <div className="PropertyItem">
-            <img className="PropertyItem-image" src={process.env.PUBLIC_URL + "/imgs/" + img} alt="property"></img>
+            <img
+                className="PropertyItem-image"
+                src={process.env.PUBLIC_URL + "/imgs/" + img}
+                alt="property" />
             <div className="PropertyItem-details">
-                <div className="PropertyItem-name">
-                    {name}
+                <div className="PropertyItem-title">
+                    {title}
                 </div>
                 <div className="PropertyItem-location">
                     {location}
@@ -16,7 +19,6 @@ const PropertyItem = ({name, location, price, img}) => {
                     {price}
                 </div>
             </div>
-            <button className="PropertyItem-button"></button>
         </div>
     </div>
     );
