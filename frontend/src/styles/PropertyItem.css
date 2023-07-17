@@ -10,7 +10,13 @@
         display: flex;
         flex-direction: column;
         margin: 10px;
+        position: relative;
     }
+        .PropertyItem-button {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
         .PropertyItem-image {
             border-radius: 10px;
             width: 100%;

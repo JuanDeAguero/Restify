@@ -4,6 +4,7 @@ const PropertyItem = ({title, location, price, img}) => {
     return (
     <div className="PropertyItem-wrapper">
         <div className="PropertyItem">
+            <button className="PropertyItem-button"></button>
             <img
                 className="PropertyItem-image"
                 src={process.env.PUBLIC_URL + "/imgs/" + img}
