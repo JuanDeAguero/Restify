@@ -11,6 +11,7 @@
 /node_modules
 fullchain.pem
 npm-debug.log*
+package-lock.json
 privkey.pem
 yarn-debug.log*
 yarn-error.log*

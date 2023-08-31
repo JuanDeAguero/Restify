@@ -8,7 +8,7 @@ const redirectApp = express();
 
 app.use(express.static("build"));
 
-redirectApp.get("*", (req, res) => {
+redirectApp.get("/", (req, res) => {
     res.redirect("https://restify.ca");
 });
 
