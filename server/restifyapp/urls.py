@@ -1,7 +1,0 @@
-from .views import index
-from django.urls import path
-
-app_name = "restifyapp"
-urlpatterns = [
-    path("", index, name="index")
-]
