@@ -1,15 +1,35 @@
 const express = require("express");
-const fs      = require("fs");
-const http    = require("http");
-const https   = require("https");
+const fs = require("fs");
+const http = require("http");
+const https = require("https");
 
 const app = express();
 const redirectApp = express();
 
 app.use(express.static("build"));
 
-redirectApp.get("/", (req, res) => {
+app.use((req, res, next) => {
+    console.log('HTTPS:', req.method, req.url, req.headers);
+    next();
+});
+
+redirectApp.use((req, res, next) => {
+    console.log('HTTP:', req.method, req.url, req.headers);
+    next();
+});
+
+redirectApp.get("*", (req, res) => {
     res.redirect("https://restify.ca");
+});
+
+app.use((err, req, res, next) => {
+    console.error(err.stack);
+    res.status(500).send("Error 500 HTTPS");
+});
+
+redirectApp.use((err, req, res, next) => {
+    console.error(err.stack);
+    res.status(500).send("Error 500 HTTP");
 });
 
 const options = {

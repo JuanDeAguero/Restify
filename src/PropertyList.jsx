@@ -28,6 +28,18 @@ const PropertyList = () => {
             price={"$671 CAD night"}
             stars={4.8}
             img={"bc1.webp"} />
+        <PropertyItem
+            title={"Modern Log Cabin"}
+            location={"Celista, British Columbia"}
+            price={"$671 CAD night"}
+            stars={4.8}
+            img={"bc1.webp"} />
+        <PropertyItem
+            title={"Modern Log Cabin"}
+            location={"Celista, British Columbia"}
+            price={"$671 CAD night"}
+            stars={4.8}
+            img={"bc1.webp"} />
     </div>
     );
 }

@@ -1,6 +1,13 @@
 import "./styles/Nav.css";
 
-const Nav = () => {
+const Nav = ({ showLanguage, setShowLanguage }) => {
+    const onLanguageClicked = () => {
+        if (showLanguage) {
+            setShowLanguage(false);
+        } else {
+            setShowLanguage(true);
+        }
+    };
     return (
     <nav className="Nav">
         <div className="Nav-left">
@@ -13,7 +20,7 @@ const Nav = () => {
             </div>
         </div>
         <div className="Nav-right">
-            <button className="Nav-language-btn">
+            <button className="Nav-language-btn" onClick={onLanguageClicked}>
                 <span className="Nav-language-icon material-symbols-outlined">
                     language
                 </span>
