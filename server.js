@@ -9,12 +9,12 @@ const redirectApp = express();
 app.use(express.static("build"));
 
 app.use((req, res, next) => {
-    console.log('HTTPS:', req.method, req.url, req.headers);
+    console.log("HTTPS:", req.method, req.url, req.headers);
     next();
 });
 
 redirectApp.use((req, res, next) => {
-    console.log('HTTP:', req.method, req.url, req.headers);
+    console.log("HTTP:", req.method, req.url, req.headers);
     next();
 });
 
