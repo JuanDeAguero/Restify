@@ -1,34 +1,47 @@
 .Language {
+    background-color: white;
+    border-color: rgb(235, 235, 235);
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 1px;
+    display: flex;
+    flex-direction: column;
+    height: 90px;
+    justify-content: space-around;
+    align-items: start;
     position: fixed;
     right: 10px;
     top: 75px;
-    z-index: 2;
-    background-color: white;
-    border-style: solid;
-    border-width: 1px;
-    border-color: rgb(235, 235, 235);
     width: 220px;
-    height: 90px;
-    display: flex;
-    flex-direction: column;
-    border-radius: 10px;
-    justify-content: space-around;
+    z-index: 1;
 }
     .Language-english {
         background-color: transparent;
-        margin-top: 8px;
         margin-left: 15px;
-        align-self: flex-start;
+        margin-top: 8px;
     }
     .Language-separation {
-        width: 200px;
-        height: 1px;
-        margin-left: 10px;
         background-color: rgb(210, 210, 210);
+        height: 1px;
+        width: 190px;
+        margin-left: 15px;
     }
     .Language-français {
-        align-self: flex-start;
         background-color: transparent;
-        margin-left: 15px;
         margin-bottom: 8px;
+        margin-left: 15px;
     }
+@media only screen and (min-width: 0) and (max-width: 700px) {
+    .Language {
+        border-style: none;
+        border-radius: 0;
+        width: 100vw;
+        right: 0;
+        top: 65px;
+    }
+    .Language-separation {
+        width: calc(100% - 30px);
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+}

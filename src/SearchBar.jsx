@@ -1,43 +1,23 @@
 import "./styles/SearchBar.css";
 
-const SearchBar = ({ setShowLocation, setShowDates, setShowGuests }) => {
-    const onLocationClicked = () => {
-        setShowLocation(true);
-        setShowDates(false);
-        setShowGuests(false);
-    };
-    const onDatesClicked = () => {
-        setShowLocation(false);
-        setShowDates(true);
-        setShowGuests(false);
-    };
-    const onGuestsClicked = () => {
-        setShowLocation(false);
-        setShowDates(false);
-        setShowGuests(true);
-    };
-    const onSearchClicked = () => {
-        setShowLocation(false);
-        setShowDates(false);
-        setShowGuests(false);
-    };
+const SearchBar = () => {
     return (
     <div className="SearchBar-wrapper">
         <div className="SearchBar">
             <div className="SearchBar-options">
-                <button className="SearchBar-location-btn" onClick={onLocationClicked}>
+                <button className="SearchBar-location-btn">
                     Location
                 </button>
                 <div className="SearchBar-divider"></div>
-                <button className="SearchBar-dates-btn" onClick={onDatesClicked}>
+                <button className="SearchBar-dates-btn">
                     Dates
                 </button>
                 <div className="SearchBar-divider"></div>
-                <button className="SearchBar-guests-btn" onClick={onGuestsClicked}>
+                <button className="SearchBar-guests-btn">
                     Guests
                 </button>
             </div>
-            <button className="SearchBar-search-btn" onClick={onSearchClicked}>
+            <button className="SearchBar-search-btn">
                 <div className="SearchBar-search-txt">
                     Search
                 </div>

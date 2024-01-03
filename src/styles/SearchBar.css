@@ -8,7 +8,6 @@
     pointer-events: none;
     position: fixed;
     width: 100%;
-    z-index: 2;
 }
     .SearchBar {
         align-items: center;
@@ -70,6 +69,7 @@
     .SearchBar-wrapper {
         bottom: 0;
         height: 70px;
+        z-index: 1;
     }
         .SearchBar {
             border-color: rgb(240, 240, 240);
