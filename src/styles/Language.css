@@ -1,4 +1,5 @@
-.Language {
+.language {
+    align-items: start;
     background-color: white;
     border-color: rgb(235, 235, 235);
     border-radius: 10px;
@@ -8,40 +9,39 @@
     flex-direction: column;
     height: 90px;
     justify-content: space-around;
-    align-items: start;
     position: fixed;
     right: 10px;
     top: 75px;
     width: 220px;
     z-index: 1;
 }
-    .Language-english {
+    .language-english {
         background-color: transparent;
         margin-left: 15px;
         margin-top: 8px;
     }
-    .Language-separation {
+    .language-separation {
         background-color: rgb(210, 210, 210);
         height: 1px;
-        width: 190px;
         margin-left: 15px;
+        width: 190px;
     }
-    .Language-français {
+    .language-français {
         background-color: transparent;
         margin-bottom: 8px;
         margin-left: 15px;
     }
 @media only screen and (min-width: 0) and (max-width: 700px) {
-    .Language {
-        border-style: none;
+    .language {
         border-radius: 0;
-        width: 100vw;
+        border-style: none;
         right: 0;
         top: 65px;
+        width: 100vw;
     }
-    .Language-separation {
-        width: calc(100% - 30px);
-        margin-left: 15px;
-        margin-right: 15px;
-    }
+        .language-separation {
+            margin-left: 15px;
+            margin-right: 15px;
+            width: calc(100% - 30px);
+        }
 }

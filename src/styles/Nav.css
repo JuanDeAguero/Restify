@@ -1,4 +1,4 @@
-.Nav {
+.nav {
     align-items: center;
     background-color: white;
     display: flex;
@@ -6,37 +6,38 @@
     justify-content: space-between;
     position: fixed;
     width: 100%;
+    z-index: 1;
 }
-.Nav * {
+.nav * {
     background-color: transparent;
 }
-    .Nav-left {
+    .nav-left {
         align-items: center;
         display: flex;
     }
-        .Nav-logo-img {
+        .nav-logo-img {
             height: 50px;
             margin-left: 30px;
             margin-right: 10px;
         }
-        .Nav-logo-img:hover {
+        .nav-logo-img:hover {
             cursor: pointer;
         }
-        .Nav-logo-txt {
+        .nav-logo-txt {
             color: #FF385C;
             font-size: 25px;
             font-weight: 700;
         }
-        .Nav-logo-txt:hover {
+        .nav-logo-txt:hover {
             cursor: pointer;
         }
-    .Nav-right {
+    .nav-right {
         align-items: center;
         display: flex;
         justify-content: flex-end;
         margin-right: 30px;
     }
-        .Nav-language-btn {
+        .nav-language-btn {
             align-items: center;
             background-color: rgb(240, 240, 240);
             border-radius: 20px;
@@ -46,12 +47,12 @@
             margin-right: 5px;
             width: 40px;
         }
-            .Nav-language-icon {
+            .nav-language-icon {
                 color: rgb(130, 130, 130);
                 overflow: hidden;
                 transform: scale(0.9);
             }
-        .Nav-notifications-btn {
+        .nav-notifications-btn {
             align-items: center;
             background-color: rgb(240, 240, 240);
             border-radius: 20px;
@@ -60,11 +61,11 @@
             justify-content: center;
             width: 40px;
         }
-            .Nav-notifications-icon {
+            .nav-notifications-icon {
                 color: rgb(130, 130, 130);
                 overflow: hidden;
             }
-        .Nav-user-btn {
+        .nav-user-btn {
             align-items: center;
             background-color: rgb(240, 240, 240);
             border-radius: 20px;
@@ -74,30 +75,31 @@
             margin-left: 5px;
             width: 40px;
         }
-            .Nav-user-icon {
+            .nav-user-icon {
                 color: rgb(130, 130, 130);
                 overflow: hidden;
             }
 @media only screen and (min-width: 0) and (max-width: 1000px) {
-    .Nav-logo-txt {
+    .nav-logo-txt {
         visibility: hidden;
     }
 }
 @media only screen and (min-width: 0) and (max-width: 700px) {
-    .Nav {
+    .nav {
         box-shadow: 0 0 15px rgb(235, 235, 235);
         height: 65px;
         z-index: 2;
     }
-        .Nav-logo-img {
-            height: 40px;
-            margin-left: 15px;
-        }
-        .Nav-logo-txt {
-            font-size: 22px;
-            visibility: visible;
-        }
-        .Nav-right {
+        /* nav-left */
+            .nav-logo-img {
+                height: 40px;
+                margin-left: 15px;
+            }
+            .nav-logo-txt {
+                font-size: 22px;
+                visibility: visible;
+            }
+        .nav-right {
             margin-right: 15px;
         }
 }

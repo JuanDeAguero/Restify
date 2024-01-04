@@ -9,29 +9,30 @@ const Nav = ({ showLanguage, setShowLanguage }) => {
         }
     };
     return (
-    <nav className="Nav">
-        <div className="Nav-left">
+    <nav className="nav">
+        <div className="nav-left">
             <img
-                className="Nav-logo-img"
+                className="nav-logo-img"
                 src={process.env.PUBLIC_URL + "/imgs/logo.png"}
-                alt="logo" />
-            <div className="Nav-logo-txt">
+                alt="logo">
+            </img>
+            <div className="nav-logo-txt">
                 RESTIFY
             </div>
         </div>
-        <div className="Nav-right">
-            <button className="Nav-language-btn" onClick={onLanguageClicked}>
-                <span className="Nav-language-icon material-symbols-outlined">
+        <div className="nav-right">
+            <button className="nav-language-btn" onClick={onLanguageClicked}>
+                <span className="nav-language-icon material-symbols-outlined">
                     language
                 </span>
             </button>
-            <button className="Nav-notifications-btn">
-                <span className="Nav-notifications-icon material-symbols-outlined">
+            <button className="nav-notifications-btn">
+                <span className="nav-notifications-icon material-symbols-outlined">
                     notifications
                 </span>
             </button>
-            <button className="Nav-user-btn">
-                <span className="Nav-user-icon material-symbols-outlined">
+            <button className="nav-user-btn">
+                <span className="nav-user-icon material-symbols-outlined">
                     person
                 </span>
             </button>

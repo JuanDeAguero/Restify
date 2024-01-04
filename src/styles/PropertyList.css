@@ -1,4 +1,4 @@
-.PropertyList {
+.property-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -8,7 +8,7 @@
     overflow: visible;
 }
 @media only screen and (min-width: 0) and (max-width: 700px) {
-    .PropertyList {
+    .property-list {
         margin-top: 75px;
     }
 }

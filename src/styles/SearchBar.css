@@ -1,4 +1,4 @@
-.SearchBar-wrapper {
+.search-bar-wrapper {
     align-items: center;
     background-color: transparent;
     display: flex;
@@ -8,8 +8,9 @@
     pointer-events: none;
     position: fixed;
     width: 100%;
+    z-index: 1;
 }
-    .SearchBar {
+    .search-bar {
         align-items: center;
         background-color: white;
         border-radius: 25px;
@@ -21,31 +22,32 @@
         padding-right: 10px;
         pointer-events: all;
     }
-    .SearchBar * {
+    .search-bar * {
         background-color: transparent;
     }
-        .SearchBar-options {
+        .search-bar-options {
             align-items: center;
             display: flex;
         }
-            .SearchBar-divider {
+            .search-bar-location-btn {
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+            .search-bar-divider {
                 background-color: rgb(230, 230, 230);
                 height: 12px;
                 width: 2px;
             }
-            .SearchBar-location-btn {
+            .search-bar-dates-btn {
                 margin-left: 10px;
                 margin-right: 10px;
             }
-            .SearchBar-dates-btn {
+            /* search-bar-divider */
+            .search-bar-guests-btn {
                 margin-left: 10px;
                 margin-right: 10px;
             }
-            .SearchBar-guests-btn {
-                margin-left: 10px;
-                margin-right: 10px;
-            }
-        .SearchBar-search-btn {
+        .search-bar-search-btn {
             align-items: center;
             background-color: #FF385C;
             border-radius: 15px;
@@ -54,24 +56,24 @@
             height: 30px;
             margin-left: 10px;
         }
-            .SearchBar-search-txt {
+            .search-bar-search-txt {
                 color: white;
                 margin-left: 10px;
                 margin-right: 3px;
             }
-            .SearchBar-search-icon {
+            .search-bar-search-icon {
                 color: white;
                 margin-right: 5px;
                 overflow: hidden;
                 transform: scale(0.8);
             }
 @media only screen and (min-width: 0) and (max-width: 700px) {
-    .SearchBar-wrapper {
+    .search-bar-wrapper {
         bottom: 0;
         height: 70px;
         z-index: 1;
     }
-        .SearchBar {
+        .search-bar {
             border-color: rgb(240, 240, 240);
             border-radius: 0;
             border-style: solid;
@@ -81,11 +83,11 @@
             justify-content: space-between;
             width: 100%;
         }
-            .SearchBar-options {
+            .search-bar-options {
                 display: flex;
                 margin-left: 5px;
             }
-            .SearchBar-search-btn {
+            .search-bar-search-btn {
                 border-radius: 20px;
                 height: 40px;
                 margin-right: 10px;

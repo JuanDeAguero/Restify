@@ -8,12 +8,12 @@ const Language = ({ setShowLanguage }) => {
         setShowLanguage(false);
     };
     return (
-    <div className="Language">
-        <button className="Language-english" onClick={onEnglishClicked}>
+    <div className="language">
+        <button className="language-english" onClick={onEnglishClicked}>
             English 🇬🇧
         </button>
-        <div className="Language-separation"></div>
-        <button className="Language-français" onClick={onFrançaisClicked}>
+        <div className="language-separation"></div>
+        <button className="language-français" onClick={onFrançaisClicked}>
             Français 🇫🇷
         </button>
     </div>

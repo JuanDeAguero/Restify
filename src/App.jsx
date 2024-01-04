@@ -2,7 +2,7 @@ import { useState } from "react";
 import Language from "./Language";
 import Nav from "./Nav";
 import Notifications from "./Notifications";
-import PropertyList from "./PropertyList";
+import PropertyList from "./Properties";
 import SearchBar from "./SearchBar";
 
 const App = () => {

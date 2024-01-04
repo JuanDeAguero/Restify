@@ -2,7 +2,7 @@ import "./styles/Notifications.css";
 
 const Notifications = () => {
     return (
-    <div className="Notifications">
+    <div className="notifications">
         
     </div>
     );

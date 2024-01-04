@@ -1,64 +1,64 @@
-.PropertyItem-wrapper {
+.property-item-wrapper {
     overflow: visible;
     position: relative;
     width: 33.33%;
 }
-.PropertyItem-wrapper * {
+.property-item-wrapper * {
     background-color: transparent;
 }
-    .PropertyItem {
+    .property-item {
         display: flex;
         flex-direction: column;
         margin: 10px;
         position: relative;
     }
-        .PropertyItem-button {
+        .property-item-button {
             height: 100%;
             position: absolute;
             width: 100%;
         }
-        .PropertyItem-image {
+        .property-item-image {
             aspect-ratio: 1/1;
             border-radius: 10px;
             object-fit: cover;
             width: 100%;
         }
-        .PropertyItem-details {
+        .property-item-details {
             margin-top: 15px;
         }
-            .PropertyItem-title {
+            .property-item-title {
                 font-size: 16px;
                 margin-bottom: 5px;
             }
-            .PropertyItem-location {
+            .property-item-location {
                 color: rgb(40, 40, 40);
                 margin-bottom: 5px;
             }
-            .PropertyItem-price {
+            .property-item-price {
                 color: rgb(90, 90, 90);
             }
 @media only screen and (min-width: 0) and (max-width: 550px) {
-    .PropertyItem-wrapper {
+    .property-item-wrapper {
         width: 100%;
     }
 }
 @media only screen and (min-width: 550px) and (max-width: 800px) {
-    .PropertyItem-wrapper {
+    .property-item-wrapper {
         width: 50%;
     }
 }
 @media only screen and (min-width: 800px) and (max-width: 1100px) {
-    .PropertyItem-wrapper {
+    .property-item-wrapper {
         width: 33.33%;
     }
 }
 @media only screen and (min-width: 1100px) and (max-width: 2000px) {
-    .PropertyItem-wrapper {
+    .property-item-wrapper {
         width: 25%;
     }
 }
 @media only screen and (min-width: 2000px) {
-    .PropertyItem-wrapper {
+    .property-item-wrapper {
         width: 20%;
     }
 }
