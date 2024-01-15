@@ -42,11 +42,15 @@ const SignUp = ({ language }) => {
     <div className="sign-up-wrapper">
         <div className="sign-up">
             <div className="sign-up-title"> {translate("Sign Up", language)} </div>
-            <input className="sign-up-first-name" placeholder={translate("First Name", language)} onChange={(e) => setFirstName(e.target.value)} />
-            <input className="sign-up-last-name" placeholder={translate("Last Name", language)} onChange={(e) => setLastName(e.target.value)} />
-            <input className="sign-up-email" placeholder="Email" onChange={(e) => setEmail(e.target.value)} />
-            <input className="sign-up-password" placeholder={translate("Password", language)} type="password" onChange={(e) => setPassword(e.target.value)} />
-            <input className="sign-up-retype-password" placeholder={translate("Retype Password", language)} type="password" onChange={(e) => setRetypePassword(e.target.value)} />
+            <input className="sign-up-first-name" placeholder={translate("First Name", language)}
+                onChange={(event) => setFirstName(event.target.value)} />
+            <input className="sign-up-last-name" placeholder={translate("Last Name", language)}
+                onChange={(event) => setLastName(event.target.value)} />
+            <input className="sign-up-email" placeholder="Email" onChange={(event) => setEmail(event.target.value)} />
+            <input className="sign-up-password" placeholder={translate("Password", language)} type="password"
+                onChange={(event) => setPassword(event.target.value)} />
+            <input className="sign-up-retype-password" placeholder={translate("Retype Password", language)} type="password"
+                onChange={(event) => setRetypePassword(event.target.value)} />
             <button className="sign-up-btn" onClick={onSignUpClicked}> {translate("SIGN UP", language)} </button>
         </div>
     </div>

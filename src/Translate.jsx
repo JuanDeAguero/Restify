@@ -43,7 +43,7 @@ const translation = {
     "Sign Up": "S'Inscrire",
     "SIGN UP": "S'INSCRIRE",
     "Small Ancestral House in the City Center": "Petite Maison Ancestrale en Centre Ville",
-    "There are no notifications.": "Il n'y a aucune notification.",
+    "There are no notifications.": "Il n'y a aucune notification."
 };
 
 const translate = (string) => {

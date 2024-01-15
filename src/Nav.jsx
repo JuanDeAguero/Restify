@@ -40,17 +40,17 @@ const Nav = ({ currentUser, showLanguage, setShowLanguage, showNotifications, se
             <Link className="nav-logo-img-wrapper" to="/" onClick={onLogoClicked}>
                 <img className="nav-logo-img" src={process.env.PUBLIC_URL + "/imgs/logo.png"} alt="logo" />
             </Link>
-            <Link className="nav-logo-txt" to="/" onClick={onLogoClicked}> RESTIFY </Link>
+            <Link className="nav-logo-txt" to="/" onClick={onLogoClicked}>RESTIFY</Link>
         </div>
         <div className="nav-right">
             <button className="nav-language-btn" onClick={onLanguageClicked}>
-                <span className="nav-language-icon material-symbols-outlined"> language </span>
+                <span className="nav-language-icon material-symbols-outlined">language</span>
             </button>
             <button className="nav-notifications-btn" onClick={onNotificationsClicked}>
-                <span className="nav-notifications-icon material-symbols-outlined"> notifications </span>
+                <span className="nav-notifications-icon material-symbols-outlined">notifications</span>
             </button>
             <button className="nav-user-btn" onClick={onUserClicked}>
-                <span className="nav-user-icon material-symbols-outlined"> person </span>
+                <span className="nav-user-icon material-symbols-outlined">person</span>
             </button>
         </div>
     </nav>

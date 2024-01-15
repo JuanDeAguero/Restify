@@ -44,7 +44,8 @@ const App = () => {
     }, []);
     return (
     <Router>
-        <Nav currentUser={currentUser} showLanguage={showLanguage} setShowLanguage={setShowLanguage}
+        <Nav currentUser={currentUser}
+            showLanguage={showLanguage} setShowLanguage={setShowLanguage}
             showNotifications={showNotifications} setShowNotifications={setShowNotifications} />
         {showLanguage ? <Language setShowLanguage={setShowLanguage} /> : null}
         {showNotifications ? <Notifications setShowNotifications={setShowNotifications} /> : null}

@@ -1,6 +1,6 @@
 import "./styles/SearchBar.css";
 import { collection, getDocs, query, where } from "firebase/firestore";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import firebaseDatabase from "./Database";
 import Property from "./Property";
@@ -82,6 +82,20 @@ const SearchBar = ({ setProperties, setShowLanguage, setShowNotifications }) => 
             case 11: return "Dec";
         }
     };
+    const locationBtn = useRef(null);
+    const updateLocation = () => {
+        if (window.innerWidth <= 800) {
+            if (location === "British Columbia") {
+                locationBtn.current.textContent = "BC";
+            } else if (location === "Ontario") {
+                locationBtn.current.textContent = "ON";
+            } else if (location === "Quebec") {
+                locationBtn.current.textContent = "QC";
+            }
+        } else {
+            locationBtn.current.textContent = translate(location);
+        }
+    };
     useEffect(() => {
         const language = localStorage.getItem("language");
         if (numInfants > 0 || numChildren > 0 || numAdults > 0 || numPets > 0) {
@@ -94,22 +108,25 @@ const SearchBar = ({ setProperties, setShowLanguage, setShowNotifications }) => 
         } else {
             setGuests("Guests");
         }
-    }, [numInfants, numChildren, numAdults, numPets]);
+        updateLocation();
+        window.addEventListener("resize", updateLocation);
+        return () => window.removeEventListener("resize", updateLocation);
+    }, [numInfants, numChildren, numAdults, numPets, location]);
     return (
     <>
     <div className="search-bar-wrapper">
         <div className="search-bar">
             <div className="search-bar-options">
-                <button className="search-bar-location-btn" onClick={onLocationClicked}>
+                <button className="search-bar-location-btn" ref={locationBtn} onClick={onLocationClicked}>
                     {translate(location)}
                 </button>
-                <div className="search-bar-divider"></div>
+                <div className="search-bar-divider" />
                 <button className="search-bar-dates-btn" onClick={onDatesClicked}>
                     {selectedStartDate == null || selectedEndDate == null ? "Date" :
                         getMonthString(selectedStartDate.getMonth()) + " " + String(selectedStartDate.getDate()) + " - " +
                         getMonthString(selectedEndDate.getMonth()) + " " + String(selectedEndDate.getDate()) }
                 </button>
-                <div className="search-bar-divider"></div>
+                <div className="search-bar-divider" />
                 <button className="search-bar-guests-btn" onClick={onGuestsClicked}>
                     {numInfants + numChildren + numAdults + numPets > 0 ? numInfants + numChildren + numAdults + numPets : ""} {translate(guests)}
                 </button>

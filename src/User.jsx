@@ -27,9 +27,9 @@ const User = ({ currentUser }) => {
     }, [currentUser]);
     return (
     <div className="user">
-        <div className="user-name"> {firstName} {lastName} </div>
-        <div className="user-img"></div>
-        <button className="user-sign-out" onClick={onSignOutClicked}> {translate("Sign out")} </button>
+        <div className="user-name">{firstName} {lastName}</div>
+        <div className="user-img" />
+        <button className="user-sign-out" onClick={onSignOutClicked}>{translate("Sign out")}</button>
     </div>
     );
 }

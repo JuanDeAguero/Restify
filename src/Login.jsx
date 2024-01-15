@@ -21,8 +21,9 @@ const Login = ({ language }) => {
     <div className="login-wrapper">
         <div className="login">
             <div className="login-title"> {translate("Login", language)} </div>
-            <input className="login-email" placeholder="Email" onChange={(e) => setEmail(e.target.value)} />
-            <input className="login-password" placeholder={translate("Password", language)} type="password" onChange={(e) => setPassword(e.target.value)} />
+            <input className="login-email" placeholder="Email" onChange={(event) => setEmail(event.target.value)} />
+            <input className="login-password" placeholder={translate("Password", language)} type="password"
+                onChange={(event) => setPassword(event.target.value)} />
             <button className="login-btn" onClick={onLoginClicked}> {translate("LOGIN", language)} </button>
             <Link to="/user/signup"> {translate("or sign up", language)} </Link>
         </div>

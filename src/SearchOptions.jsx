@@ -18,20 +18,10 @@ const Location = ({ setLocation }) => {
     return (
     <div className="location">
         <div className="location-canada">
-            <img
-                className="location-canada-img"
-                src={process.env.PUBLIC_URL + "/imgs/canada.png"}
-                alt="canada">
-            </img>
-            <button className="location-province location-ON" onClick={onONClicked}>
-                ON
-            </button>
-            <button className="location-province location-QC" onClick={onQCClicked}>
-                QC
-            </button>
-            <button className="location-province location-BC" onClick={onBCClicked}>
-                BC
-            </button>
+            <img className="location-canada-img" src={process.env.PUBLIC_URL + "/imgs/canada.png"} alt="canada" />
+            <button className="location-province location-ON" onClick={onONClicked}>ON</button>
+            <button className="location-province location-QC" onClick={onQCClicked}>QC</button>
+            <button className="location-province location-BC" onClick={onBCClicked}>BC</button>
         </div>
     </div>
     );
@@ -122,9 +112,7 @@ const Dates = ({ selectedStartDate, setSelectedStartDate, selectedEndDate, setSe
                     <div key={index} className="dates-weekday">{day}</div>
                 ))}
             </div>
-            <div className="dates-days">
-                {calendarDays}
-            </div>
+            <div className="dates-days">{calendarDays}</div>
         </div>
     );
 };
@@ -135,49 +123,25 @@ const Guests = ({ numInfants, setNumInfants, numChildren, setNumChildren, numAdu
         <div className="guests-row">
             <div> {translate("Infants", language)} </div>
             <div className="guests-row-right">
-                <button className="guests-button"
-                    onClick={() => { if (numInfants > 0) setNumInfants(numInfants - 1) }}>
-                    -
-                </button>
-                <div className="guests-number">
-                    {numInfants}
-                </div>
-                <button className="guests-button"
-                    onClick={() => { if (numInfants < 5) setNumInfants(numInfants + 1) }}>
-                    +
-                </button>
+                <button className="guests-button" onClick={() => { if (numInfants > 0) setNumInfants(numInfants - 1) }}>-</button>
+                <div className="guests-number">{numInfants}</div>
+                <button className="guests-button" onClick={() => { if (numInfants < 5) setNumInfants(numInfants + 1) }}>+</button>
             </div>
         </div>
         <div className="guests-row">
             <div> {translate("Children", language)} </div>
             <div className="guests-row-right">
-                <button className="guests-button"
-                    onClick={() => { if (numChildren > 0) setNumChildren(numChildren - 1) }}>
-                    -
-                </button>
-                <div className="guests-number">
-                    {numChildren}
-                </div>
-                <button className="guests-button"
-                    onClick={() => { if (numChildren < 5) setNumChildren(numChildren + 1) }}>
-                    +
-                </button>
+                <button className="guests-button" onClick={() => { if (numChildren > 0) setNumChildren(numChildren - 1) }}>-</button>
+                <div className="guests-number">{numChildren}</div>
+                <button className="guests-button" onClick={() => { if (numChildren < 5) setNumChildren(numChildren + 1) }}>+</button>
             </div>
         </div>
         <div className="guests-row">
             <div> {translate("Adults", language)} </div>
             <div className="guests-row-right">
-                <button className="guests-button"
-                    onClick={() => { if (numAdults > 0) setNumAdults(numAdults - 1) }}>
-                    -
-                </button>
-                <div className="guests-number">
-                    {numAdults}
-                </div>
-                <button className="guests-button"
-                    onClick={() => { if (numAdults < 5) setNumAdults(numAdults + 1) }}>
-                    +
-                </button>
+                <button className="guests-button" onClick={() => { if (numAdults > 0) setNumAdults(numAdults - 1) }}>-</button>
+                <div className="guests-number">{numAdults}</div>
+                <button className="guests-button" onClick={() => { if (numAdults < 5) setNumAdults(numAdults + 1) }}>+</button>
             </div>
         </div>
         <div className="guests-row">
@@ -203,8 +167,7 @@ const Guests = ({ numInfants, setNumInfants, numChildren, setNumChildren, numAdu
 const SearchOptions = ({
     setLocation, showLocation, showDates, showGuests, optionsWidth,
     selectedStartDate, setSelectedStartDate, selectedEndDate, setSelectedEndDate,
-    numInfants, setNumInfants, numChildren, setNumChildren, numAdults, setNumAdults, numPets, setNumPets,
-    language
+    numInfants, setNumInfants, numChildren, setNumChildren, numAdults, setNumAdults, numPets, setNumPets
 }) => {
     const options = useRef(null);
     const updateWidth = () => {
@@ -224,12 +187,11 @@ const SearchOptions = ({
         <div className="search-options" ref={options}>
             { showLocation ? <Location setLocation={setLocation} /> : null }
             { showDates ? <Dates selectedStartDate={selectedStartDate} setSelectedStartDate={setSelectedStartDate}
-                selectedEndDate={selectedEndDate} setSelectedEndDate={setSelectedEndDate} language={language} /> : null }
+                selectedEndDate={selectedEndDate} setSelectedEndDate={setSelectedEndDate} /> : null }
             { showGuests ? <Guests numInfants={numInfants} setNumInfants={setNumInfants}
                 numChildren={numChildren} setNumChildren={setNumChildren}
                 numAdults={numAdults} setNumAdults={setNumAdults}
-                numPets={numPets} setNumPets={setNumPets}
-                language={language} /> : null }
+                numPets={numPets} setNumPets={setNumPets} /> : null }
         </div>
     </div>
     );

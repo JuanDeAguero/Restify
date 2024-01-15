@@ -1,6 +1,6 @@
 import "./styles/Language.css";
 
-const Language = ({ setLanguage, setShowLanguage }) => {
+const Language = ({ setShowLanguage }) => {
     const onEnglishClicked = () => {
         localStorage.setItem("language", "en");
         setShowLanguage(false);
@@ -11,13 +11,9 @@ const Language = ({ setLanguage, setShowLanguage }) => {
     };
     return (
     <div className="language">
-        <button className="language-english" onClick={onEnglishClicked}>
-            English 🇬🇧
-        </button>
-        <div className="language-separation"></div>
-        <button className="language-français" onClick={onFrançaisClicked}>
-            Français 🇫🇷
-        </button>
+        <button className="language-english" onClick={onEnglishClicked}>English 🇬🇧</button>
+        <div className="language-separation" />
+        <button className="language-français" onClick={onFrançaisClicked}>Français 🇫🇷</button>
     </div>
     );
 }
