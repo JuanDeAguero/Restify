@@ -1,17 +1,19 @@
 import "./styles/Dates.css";
+import "./styles/Guests.css";
 import "./styles/Location.css";
 import "./styles/SearchOptions.css";
 import { useEffect, useState, useRef } from "react";
+import translate from "./Translate";
 
 const Location = ({ setLocation }) => {
     const onONClicked = () => {
-        setLocation("ON");
+        setLocation("Ontario");
     };
     const onQCClicked = () => {
-        setLocation("QC");
+        setLocation("Quebec");
     };
     const onBCClicked = () => {
-        setLocation("BC");
+        setLocation("British Columbia");
     };
     return (
     <div className="location">
@@ -35,7 +37,7 @@ const Location = ({ setLocation }) => {
     );
 }
 
-const Dates = ({ selectedStartDate, setSelectedStartDate, selectedEndDate, setSelectedEndDate }) => {
+const Dates = ({ selectedStartDate, setSelectedStartDate, selectedEndDate, setSelectedEndDate, language }) => {
     const [currentMonth, setCurrentMonth] = useState(new Date().getMonth());
     const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
     const days = ["S", "M", "T", "W", "T", "F", "S"];
@@ -90,12 +92,28 @@ const Dates = ({ selectedStartDate, setSelectedStartDate, selectedEndDate, setSe
     for (let i = 1; i <= remainingCells; i++) {
         calendarDays.push(<div key={`next-${i}`} className="dates-day dates-out-of-month">{i}</div>);
     }
+    const getMonthString = (index) => {
+        switch (index) {
+            case 0: return translate("January", language);
+            case 1: return translate("February", language);
+            case 2: return translate("March", language);
+            case 3: return translate("April", language);
+            case 4: return translate("May", language);
+            case 5: return translate("June", language);
+            case 6: return translate("July", language);
+            case 7: return translate("August", language);
+            case 8: return translate("September", language);
+            case 9: return translate("October", language);
+            case 10: return translate("November", language);
+            case 11: return translate("December", language);
+        }
+    };
     return (
         <div className="dates">
             <div className="dates-month-navigation">
                 <button onClick={decrementMonth}>&lt;</button>
                 <span className="dates-month">
-                    {new Date(currentYear, currentMonth).toLocaleString("default", { month: "long" })} {currentYear}
+                    {getMonthString(new Date(currentYear, currentMonth).getMonth())} {currentYear}
                 </span>
                 <button onClick={incrementMonth}>&gt;</button>
             </div>
@@ -111,18 +129,86 @@ const Dates = ({ selectedStartDate, setSelectedStartDate, selectedEndDate, setSe
     );
 };
 
-const Guests = () => {
+const Guests = ({ numInfants, setNumInfants, numChildren, setNumChildren, numAdults, setNumAdults, numPets, setNumPets, language }) => {
     return (
     <div className="guests">
-        Guests
+        <div className="guests-row">
+            <div> {translate("Infants", language)} </div>
+            <div className="guests-row-right">
+                <button className="guests-button"
+                    onClick={() => { if (numInfants > 0) setNumInfants(numInfants - 1) }}>
+                    -
+                </button>
+                <div className="guests-number">
+                    {numInfants}
+                </div>
+                <button className="guests-button"
+                    onClick={() => { if (numInfants < 5) setNumInfants(numInfants + 1) }}>
+                    +
+                </button>
+            </div>
+        </div>
+        <div className="guests-row">
+            <div> {translate("Children", language)} </div>
+            <div className="guests-row-right">
+                <button className="guests-button"
+                    onClick={() => { if (numChildren > 0) setNumChildren(numChildren - 1) }}>
+                    -
+                </button>
+                <div className="guests-number">
+                    {numChildren}
+                </div>
+                <button className="guests-button"
+                    onClick={() => { if (numChildren < 5) setNumChildren(numChildren + 1) }}>
+                    +
+                </button>
+            </div>
+        </div>
+        <div className="guests-row">
+            <div> {translate("Adults", language)} </div>
+            <div className="guests-row-right">
+                <button className="guests-button"
+                    onClick={() => { if (numAdults > 0) setNumAdults(numAdults - 1) }}>
+                    -
+                </button>
+                <div className="guests-number">
+                    {numAdults}
+                </div>
+                <button className="guests-button"
+                    onClick={() => { if (numAdults < 5) setNumAdults(numAdults + 1) }}>
+                    +
+                </button>
+            </div>
+        </div>
+        <div className="guests-row">
+            <div> {translate("Pets", language)} </div>
+            <div className="guests-row-right">
+                <button className="guests-button"
+                    onClick={() => { if (numPets > 0) setNumPets(numPets - 1) }}>
+                    -
+                </button>
+                <div className="guests-number">
+                    {numPets}
+                </div>
+                <button className="guests-button"
+                    onClick={() => { if (numPets < 5) setNumPets(numPets + 1) }}>
+                    +
+                </button>
+            </div>
+        </div>
     </div>
     );
 }
 
-const SearchOptions = ({ setLocation, showLocation, showDates, showGuests, optionsWidth, selectedStartDate, setSelectedStartDate, selectedEndDate, setSelectedEndDate }) => {
+const SearchOptions = ({
+    setLocation, showLocation, showDates, showGuests, optionsWidth,
+    selectedStartDate, setSelectedStartDate, selectedEndDate, setSelectedEndDate,
+    numInfants, setNumInfants, numChildren, setNumChildren, numAdults, setNumAdults, numPets, setNumPets,
+    language
+}) => {
     const options = useRef(null);
     const updateWidth = () => {
-        if (window.innerWidth <= 700) {
+        if (window.innerWidth <= 800) {
             options.current.style.width = "100%";
         } else {
             options.current.style.width = String(optionsWidth) + "px";
@@ -137,8 +223,13 @@ const SearchOptions = ({ setLocation, showLocation, showDates, showGuests, optio
     <div className="search-options-wrapper">
         <div className="search-options" ref={options}>
             { showLocation ? <Location setLocation={setLocation} /> : null }
-            { showDates ? <Dates selectedStartDate={selectedStartDate} setSelectedStartDate={setSelectedStartDate} selectedEndDate={selectedEndDate} setSelectedEndDate={setSelectedEndDate} /> : null }
-            { showGuests ? <Guests /> : null }
+            { showDates ? <Dates selectedStartDate={selectedStartDate} setSelectedStartDate={setSelectedStartDate}
+                selectedEndDate={selectedEndDate} setSelectedEndDate={setSelectedEndDate} language={language} /> : null }
+            { showGuests ? <Guests numInfants={numInfants} setNumInfants={setNumInfants}
+                numChildren={numChildren} setNumChildren={setNumChildren}
+                numAdults={numAdults} setNumAdults={setNumAdults}
+                numPets={numPets} setNumPets={setNumPets}
+                language={language} /> : null }
         </div>
     </div>
     );

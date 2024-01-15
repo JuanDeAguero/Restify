@@ -1,10 +1,12 @@
 import "./styles/Language.css";
 
-const Language = ({ setShowLanguage }) => {
+const Language = ({ setLanguage, setShowLanguage }) => {
     const onEnglishClicked = () => {
+        localStorage.setItem("language", "en");
         setShowLanguage(false);
     };
     const onFrançaisClicked = () => {
+        localStorage.setItem("language", "fr");
         setShowLanguage(false);
     };
     return (

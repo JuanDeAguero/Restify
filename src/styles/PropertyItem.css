@@ -7,9 +7,10 @@
     background-color: transparent;
 }
     .property-item {
+        border-radius: 10px;
         display: flex;
         flex-direction: column;
-        margin: 10px;
+        margin: 15px;
         position: relative;
     }
         .property-item-button {
@@ -47,7 +48,7 @@
         width: 50%;
     }
 }
-@media only screen and (min-width: 800px) and (max-width: 1100px) {
+@media only screen and (min-width: 801px) and (max-width: 1100px) {
     .property-item-wrapper {
         width: 33.33%;
     }

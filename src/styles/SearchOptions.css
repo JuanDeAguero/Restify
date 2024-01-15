@@ -22,16 +22,16 @@
         transition: width 0.3s;
         width: 500px;
     }
-@media only screen and (min-width: 0) and (max-width: 700px) {
+@media only screen and (min-width: 0) and (max-width: 800px) {
     .search-options-wrapper {
         bottom: 71px;
         top: auto;
     }
         .search-options {
-            border-bottom-left-radius: 0;
-            border-bottom-right-radius: 0;
+            border-radius: 0px;
             border-bottom: none;
-            border-radius: 20px;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
             width: 100%;
         }
 }

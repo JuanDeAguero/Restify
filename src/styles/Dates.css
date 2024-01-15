@@ -1,74 +1,71 @@
 .dates {
     align-items: center;
+    align-self: flex-start;
+    background-color: transparent;
     display: flex;
     flex-direction: column;
-    background-color: transparent;
-    width: 280px;
-    align-self: flex-start;
     margin-top: 23px;
     position: relative;
+    width: 280px;
 }
 .dates * {
     background-color: transparent;
 }
-.dates-month {
-    font-size: 15px;
-}
-.dates-weekdays {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    margin-bottom: 10px;
-}
-.dates-weekday {
-    font-weight: bold;
-    text-align: center;
-    width: 14.28%;
-    font-size: 14px;
-}
-.dates-days {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: start;
-    width: 100%;
-}
-.dates-day {
-    cursor: pointer;
-    margin-bottom: 8px;
-    height: 28px;
-    width: 14.28%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 14px;
-}
-.dates-selected {
-    background-color: blue;
-    color: white;
-}
-.dates-empty {
-    width: 14.28%;
-}
-.dates-month-navigation {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    margin-bottom: 30px;
-}
-.dates-month-navigation button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 20px;
-    margin-right: 15px;
-    margin-left: 15px;
-}
-.dates-day.dates-in-range {
-    background-color: lightblue;
-}
-.dates-day.dates-out-of-month {
-    color: rgb(195, 195, 195);
-    font-size: 13px;
-    pointer-events: none;
-}
+    .dates-month-navigation {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 30px;
+        width: 100%;
+    }
+        .dates-month-navigation button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+        .dates-month {
+            font-size: 15px;
+        }
+    .dates-weekdays {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 10px;
+        width: 100%;
+    }
+        .dates-weekday {
+            font-size: 14px;
+            font-weight: bold;
+            text-align: center;
+            width: 14.28%;
+        }
+    .dates-days {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: start;
+        width: 100%;
+    }
+        .dates-day {
+            align-items: center;
+            cursor: pointer;
+            display: flex;
+            font-size: 14px;
+            height: 28px;
+            justify-content: center;
+            margin-bottom: 8px;
+            width: 14.28%;
+        }
+            .dates-day.dates-in-range {
+                background-color: #ffdbe1;
+            }
+            .dates-day.dates-out-of-month {
+                color: rgb(195, 195, 195);
+                font-size: 13px;
+                pointer-events: none;
+            }
+        .dates-selected {
+            background-color: #FF385C;
+            color: white;
+        }
