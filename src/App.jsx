@@ -49,7 +49,7 @@ const App = () => {
             showNotifications={showNotifications} setShowNotifications={setShowNotifications} />
         {showLanguage ? <Language setShowLanguage={setShowLanguage} /> : null}
         {showNotifications ? <Notifications setShowNotifications={setShowNotifications} /> : null}
-        <SearchBar setProperties={setProperties} setShowLanguage={setShowLanguage} setShowNotifications={setShowNotifications} />
+        <SearchBar setProperties={setProperties} showLanguage={showLanguage} setShowLanguage={setShowLanguage} setShowNotifications={setShowNotifications} />
         <Routes>
             <Route path="/" element={<PropertyList properties={properties} />} />
             <Route path="/user" element={<User currentUser={currentUser} />} />

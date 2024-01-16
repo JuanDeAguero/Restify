@@ -7,7 +7,7 @@ import Property from "./Property";
 import SearchOptions from "./SearchOptions";
 import translate from "./Translate";
 
-const SearchBar = ({ setProperties, setShowLanguage, setShowNotifications }) => {
+const SearchBar = ({ setProperties, showLanguage, setShowLanguage, setShowNotifications }) => {
     const navigate = useNavigate();
     const [location, setLocation] = useState("Location");
     const [guests, setGuests] = useState("Guests");
@@ -111,7 +111,7 @@ const SearchBar = ({ setProperties, setShowLanguage, setShowNotifications }) => 
         updateLocation();
         window.addEventListener("resize", updateLocation);
         return () => window.removeEventListener("resize", updateLocation);
-    }, [numInfants, numChildren, numAdults, numPets, location]);
+    }, [numInfants, numChildren, numAdults, numPets, location, showLanguage]);
     return (
     <>
     <div className="search-bar-wrapper">
